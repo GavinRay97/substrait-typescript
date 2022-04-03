@@ -1,0 +1,16 @@
+{
+    "name": "substrait-typescript",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "nodemon src/index.ts",
+        "generate-proto": "npx protoc --ts_out ./src/proto-generated --proto_path ./ substrait/algebra.proto substrait/function.proto substrait/plan.proto substrait/type_expressions.proto substrait/capabilities.proto  substrait/parameterized_types.proto  substrait/type.proto substrait/extensions/extensions.proto google/protobuf/any.proto"
+    },
+    "devDependencies": {
+        "@protobuf-ts/plugin": "^2.2.4",
+        "nodemon": "^2.0.15",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.2"
+    }
+}
